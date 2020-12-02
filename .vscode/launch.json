@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            //cwd=current work directory, will launch the program to debug in this directory
+            "cwd": "${workspaceFolder}/app",
+            //使用npm作为调试工具
+            "runtimeExecutable": "npm",
+            //等价于npm run-script start，会在package.json的scripts字段找到对应的脚本并执行，换言之第二个参数只能是package.json中scripts的某个key值
+            //可惜的是此处不支持多个脚本串行，比如同时传入lint和start，折中的串行方法是在package.json文件中用&&合并脚本
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ]
+        }
+    ]
+}
