@@ -8,7 +8,7 @@ const BotMessageRegex = new RegExp('^@bot (.*)');
 //React-Redux将所有组件分为两大类，UI组件（presentational component）和容器组件（container component）
 //UI组件特点：
 //	- 只负责UI的呈现，不涉及任何业务逻辑
-//	- 没有状态，即不使用this.state变量
+//	- 没有状态，即不会使用this.state变量
 //	- 所有数据都由this.props提供
 //	- 不使用任何Redux的API
 //ChatInput即为UI组件
