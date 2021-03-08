@@ -935,15 +935,19 @@ export default class RoomClient
 		}
 	}
 
+	// Make the webcam enabled
 	async enableWebcam()
 	{
 		logger.debug('enableWebcam()');
 
+		// Do not reopen it again
 		if (this._webcamProducer)
 			return;
+		// To disable the shared producer and waiting for it to be done.
 		else if (this._shareProducer)
 			await this.disableShare();
 
+		// To check if we can enable the webcam or not
 		if (!this._mediasoupDevice.canProduce('video'))
 		{
 			logger.error('enableWebcam() | cannot produce video');
@@ -971,6 +975,7 @@ export default class RoomClient
 
 				logger.debug('enableWebcam() | calling getUserMedia()');
 
+				// Sepcify the device Id and video resolution
 				const stream = await navigator.mediaDevices.getUserMedia(
 					{
 						video :
@@ -998,6 +1003,7 @@ export default class RoomClient
 				videoGoogleStartBitrate : 1000
 			};
 
+			// Using the H264 codec by force
 			if (this._forceH264)
 			{
 				codec = this._mediasoupDevice.rtpCapabilities.codecs
@@ -1008,6 +1014,7 @@ export default class RoomClient
 					throw new Error('desired H264 codec+configuration is not supported');
 				}
 			}
+			// Force to using VP9 codec
 			else if (this._forceVP9)
 			{
 				codec = this._mediasoupDevice.rtpCapabilities.codecs

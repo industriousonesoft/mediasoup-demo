@@ -425,6 +425,7 @@ async function runHttpsServer()
 {
 	logger.info('running an HTTPS server...');
 
+	// logger.info(config.https.tls.cert);
 	// HTTPS server for the protoo WebSocket server.
 	const tls =
 	{
