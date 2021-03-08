@@ -7,17 +7,17 @@ module.exports =
 		node: true
 	},
 	plugins:
-	[
-		'import',
-		'react',
-		'jsx-control-statements'
-	],
+		[
+			'import',
+			'react',
+			'jsx-control-statements'
+		],
 	extends:
-	[
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:jsx-control-statements/recommended'
-	],
+		[
+			'eslint:recommended',
+			'plugin:react/recommended',
+			'plugin:jsx-control-statements/recommended'
+		],
 	settings:
 	{
 		react:
@@ -36,59 +36,61 @@ module.exports =
 			jsx: true
 		}
 	},
+	ignorePatterns: [
+	],
 	rules:
 	{
-		'array-bracket-spacing': [ 2, 'always',
-		{
-			objectsInArrays: true,
-		  arraysInArrays: true
-		}],
-		'arrow-parens': [ 2, 'always' ],
+		'array-bracket-spacing': [2, 'always',
+			{
+				objectsInArrays: true,
+				arraysInArrays: true
+			}],
+		'arrow-parens': [2, 'always'],
 		'arrow-spacing': 2,
-		'block-spacing': [ 2, 'always' ],
-		'brace-style': [ 2, 'allman', { allowSingleLine: true } ],
+		'block-spacing': [2, 'always'],
+		'brace-style': [2, 'allman', { allowSingleLine: true }],
 		'camelcase': 2,
 		'comma-dangle': 2,
-		'comma-spacing': [ 2, { before: false, after: true } ],
+		'comma-spacing': [2, { before: false, after: true }],
 		'comma-style': 2,
 		'computed-property-spacing': 2,
 		'constructor-super': 2,
 		'func-call-spacing': 2,
 		'generator-star-spacing': 2,
 		'guard-for-in': 2,
-		'indent': [ 2, 'tab', { 'SwitchCase': 1 } ],
-		'key-spacing': [ 2,
-		{
-			singleLine:
+		'indent': [2, 'tab', { 'SwitchCase': 1 }],
+		'key-spacing': [2,
 			{
-				beforeColon: false,
-				afterColon: true
-			},
-			multiLine:
-			{
-				beforeColon: true,
-				afterColon: true,
-				align: 'colon'
-			}
-		}],
+				singleLine:
+				{
+					beforeColon: false,
+					afterColon: true
+				},
+				multiLine:
+				{
+					beforeColon: true,
+					afterColon: true,
+					align: 'colon'
+				}
+			}],
 		'keyword-spacing': 2,
-		'linebreak-style': [ 2, 'unix' ],
-		'lines-around-comment': [ 2,
-		{
-			allowBlockStart: true,
-			allowObjectStart: true,
-			beforeBlockComment: true,
-			beforeLineComment: false
-		}],
-		'max-len': [ 2, 94,
-		{
-			tabWidth: 2,
-			comments: 110,
-			ignoreUrls: true,
-			ignoreStrings: true,
-			ignoreTemplateLiterals: true,
-			ignoreRegExpLiterals: true
-		}],
+		'linebreak-style': [2, 'unix'],
+		'lines-around-comment': [2,
+			{
+				allowBlockStart: true,
+				allowObjectStart: true,
+				beforeBlockComment: true,
+				beforeLineComment: false
+			}],
+		'max-len': [2, 94,
+			{
+				tabWidth: 2,
+				comments: 110,
+				ignoreUrls: true,
+				ignoreStrings: true,
+				ignoreTemplateLiterals: true,
+				ignoreRegExpLiterals: true
+			}],
 		'newline-after-var': 2,
 		'newline-before-return': 2,
 		'newline-per-chained-call': 2,
@@ -105,7 +107,7 @@ module.exports =
 		'no-dupe-keys': 2,
 		'no-duplicate-case': 2,
 		'no-div-regex': 2,
-		'no-empty': [ 2, { allowEmptyCatch: true } ],
+		'no-empty': [2, { allowEmptyCatch: true }],
 		'no-empty-pattern': 2,
 		'no-else-return': 0,
 		'no-eval': 2,
@@ -129,7 +131,7 @@ module.exports =
 		'no-mixed-spaces-and-tabs': 2,
 		'no-multi-spaces': 2,
 		'no-multi-str': 2,
-		'no-multiple-empty-lines': [ 2, { max: 1, maxEOF: 0, maxBOF: 0 } ],
+		'no-multiple-empty-lines': [2, { max: 1, maxEOF: 0, maxBOF: 0 }],
 		'no-native-reassign': 2,
 		'no-negated-in-lhs': 2,
 		'no-new': 2,
@@ -155,8 +157,8 @@ module.exports =
 		'no-unexpected-multiline': 2,
 		'no-unmodified-loop-condition': 2,
 		'no-unreachable': 2,
-		'no-unused-vars': [ 1, { vars: 'all', args: 'after-used' }],
-		'no-use-before-define': [ 2, { functions: false } ],
+		'no-unused-vars': [1, { vars: 'all', args: 'after-used' }],
+		'no-use-before-define': [2, { functions: false }],
 		'no-useless-call': 2,
 		'no-useless-computed-key': 2,
 		'no-useless-concat': 2,
@@ -164,24 +166,24 @@ module.exports =
 		'no-var': 2,
 		'no-whitespace-before-property': 2,
 		'object-curly-newline': 0,
-		'object-curly-spacing': [ 2, 'always' ],
-		'object-property-newline': [ 2, { allowMultiplePropertiesPerLine: true } ],
+		'object-curly-spacing': [2, 'always'],
+		'object-property-newline': [2, { allowMultiplePropertiesPerLine: true }],
 		'prefer-const': 2,
 		'prefer-rest-params': 2,
 		'prefer-spread': 2,
 		'prefer-template': 2,
-		'quotes': [ 2, 'single', { avoidEscape: true } ],
-		'semi': [ 2, 'always' ],
+		'quotes': [2, 'single', { avoidEscape: true }],
+		'semi': [2, 'always'],
 		'semi-spacing': 2,
 		'space-before-blocks': 2,
-		'space-before-function-paren': [ 2,
-		{
-			anonymous  : 'never',
-			named      : 'never',
-			asyncArrow : 'always'
-		}],
-		'space-in-parens': [ 2, 'never' ],
-		'spaced-comment': [ 2, 'always' ],
+		'space-before-function-paren': [2,
+			{
+				anonymous: 'never',
+				named: 'never',
+				asyncArrow: 'always'
+			}],
+		'space-in-parens': [2, 'never'],
+		'spaced-comment': [2, 'always'],
 		'strict': 2,
 		'valid-typeof': 2,
 		'eol-last': 2,
@@ -190,16 +192,16 @@ module.exports =
 		'import/extensions': 2,
 		'import/no-duplicates': 2,
 		// eslint-plugin-react options.
-		'jsx-quotes': [ 2, 'prefer-single' ],
-		'react/display-name': [ 2, { ignoreTranspilerName: false } ],
+		'jsx-quotes': [2, 'prefer-single'],
+		'react/display-name': [2, { ignoreTranspilerName: false }],
 		'react/forbid-prop-types': 0,
 		'react/jsx-boolean-value': 2,
 		'react/jsx-closing-bracket-location': 2,
 		'react/jsx-curly-spacing': 2,
 		'react/jsx-equals-spacing': 2,
 		'react/jsx-handler-names': 2,
-		'react/jsx-indent-props': [ 2, 'tab' ],
-		'react/jsx-indent': [ 2, 'tab' ],
+		'react/jsx-indent-props': [2, 'tab'],
+		'react/jsx-indent': [2, 'tab'],
 		'react/jsx-key': 2,
 		'react/jsx-max-props-per-line': 0,
 		'react/jsx-no-bind': 0,
@@ -222,15 +224,15 @@ module.exports =
 		'react/no-string-refs': 0,
 		'react/no-unknown-property': 2,
 		'react/prefer-es6-class': 2,
-		'react/prop-types': [ 2, { skipUndeclared: true } ],
+		'react/prop-types': [2, { skipUndeclared: true }],
 		'react/react-in-jsx-scope': 2,
 		'react/self-closing-comp': 2,
 		'react/sort-comp': 0,
-		'react/jsx-wrap-multilines': [ 2,
-		{
-			declaration: false,
-			assignment: false,
-			return: true
-		}]
+		'react/jsx-wrap-multilines': [2,
+			{
+				declaration: false,
+				assignment: false,
+				return: true
+			}]
 	}
 };

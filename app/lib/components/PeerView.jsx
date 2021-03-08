@@ -18,6 +18,7 @@ const tinyFaceDetectorOptions = new faceapi.TinyFaceDetectorOptions(
 		scoreThreshold : 0.5
 	});
 
+//PeerView UI component
 export default class PeerView extends React.Component
 {
 	constructor(props)
